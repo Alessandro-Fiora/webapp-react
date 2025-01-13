@@ -15,7 +15,7 @@ export default function MovieIndexPage() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container pt-5">
       <h1>Movie List</h1>
       <ul>
         {movies.map((movie) => (

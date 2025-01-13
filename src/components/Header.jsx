@@ -20,11 +20,7 @@ export default function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <NavLink className="nav-link" aria-current="page" to="/about">
-                About
-              </NavLink>
-
+            <li>
               <NavLink className="nav-link" aria-current="page" to="/movies">
                 Movies
               </NavLink>
