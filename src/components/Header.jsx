@@ -24,6 +24,10 @@ export default function Header() {
               <NavLink className="nav-link" aria-current="page" to="/about">
                 About
               </NavLink>
+
+              <NavLink className="nav-link" aria-current="page" to="/movies">
+                Movies
+              </NavLink>
             </li>
           </ul>
         </div>
