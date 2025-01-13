@@ -9,21 +9,41 @@ export default function MovieIndexPage() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setMovies(data.movies);
       });
   }, []);
 
   return (
-    <div className="container pt-5">
-      <h1>Movie List</h1>
-      <ul>
-        {movies.map((movie) => (
-          <li key={movie.id}>
-            <Link to={"/movies/" + movie.id}>{movie.title} </Link>
-          </li>
-        ))}
-      </ul>
+    <div className="container">
+      <h1 className="h2">Movie List</h1>
+
+      {/* MOVIE RESULTS SECTION */}
+      <section className="pt-3">
+        <table className="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Director</th>
+              <th scope="col">Genre</th>
+            </tr>
+          </thead>
+          <tbody>
+            {movies.map((movie) => (
+              <tr key={movie.id}>
+                <td>
+                  <Link to={"/movies/" + movie.id}>{movie.title}</Link>
+                </td>
+                <td>
+                  <Link to={"/movies/" + movie.id}>{movie.director}</Link>
+                </td>
+                <td>
+                  <Link to={"/movies/" + movie.id}>{movie.genre}</Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </section>
     </div>
   );
 }

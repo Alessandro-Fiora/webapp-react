@@ -1,0 +1,13 @@
+.container {
+  padding-top: 1.5rem;
+}
+
+table a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
