@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
+import Card from "../../components/Card";
 
 export default function MovieIndexPage() {
   const [movies, setMovies] = useState([]);
@@ -15,34 +16,22 @@ export default function MovieIndexPage() {
 
   return (
     <div className="container">
-      <h1 className="h2">Movie List</h1>
+      <h1 className="h2">All movies</h1>
 
       {/* MOVIE RESULTS SECTION */}
-      <section className="pt-3">
-        <table className="table table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Title</th>
-              <th scope="col">Director</th>
-              <th scope="col">Genre</th>
-            </tr>
-          </thead>
-          <tbody>
-            {movies.map((movie) => (
-              <tr key={movie.id}>
-                <td>
-                  <Link to={"/movies/" + movie.id}>{movie.title}</Link>
-                </td>
-                <td>
-                  <Link to={"/movies/" + movie.id}>{movie.director}</Link>
-                </td>
-                <td>
-                  <Link to={"/movies/" + movie.id}>{movie.genre}</Link>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <section id="movie-results" className="pt-3">
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3 ">
+          {movies.map((movie) => {
+            return (
+              <Card
+                key={movie.id}
+                id={movie.id}
+                title={movie.title}
+                image={movie.image}
+              />
+            );
+          })}
+        </div>
       </section>
     </div>
   );

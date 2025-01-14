@@ -1,13 +1,57 @@
-.container {
-  padding-top: 1.5rem;
+:root {
+  --primary-color: rgb(31 68 137);
+  --accent-color: rgb(252 193 58);
 }
 
-table a {
-  display: block;
+body {
+  color: var(--primary-color);
+}
+
+.navbar {
+  background-color: var(--primary-color) !important;
+}
+.navbar-brand {
+  color: var(--accent-color) !important;
+}
+.nav-link {
+  color: var(--accent-color) !important;
+}
+.navbar-toggler {
+  color: var(--accent-color) !important;
+}
+
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+a {
   text-decoration: none;
   color: inherit;
 }
 
 li {
   list-style-type: none;
+}
+
+.btn {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.btn:hover {
+  color: var(--accent-color);
+}
+
+#movie-results .card {
+  box-shadow: 0px 0px 4px rgb(31 68 137 / 30%);
+}
+
+#movie-detail .card {
+  border: none;
+  border-radius: 0;
+}
+
+#movie-detail .card-title {
+  color: var(--primary-color);
 }

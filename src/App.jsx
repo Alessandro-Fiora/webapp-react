@@ -20,7 +20,7 @@ function App() {
           </Route>
 
           {/* ERROR PAGES */}
-          <Route path="/404" Component={NotFoundPage}></Route>
+          <Route path="*" Component={NotFoundPage}></Route>
         </Route>
       </Routes>
     </BrowserRouter>
